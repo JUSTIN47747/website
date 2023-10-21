@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+	<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+	<head>
+		<title>Justin's Photography</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+		<link rel="icon" type="image/jpg" href="camera.png">
+		<link rel="stylesheet" type="text/css" href="Final.css"/>
+
+	</head>
+	<body>
+		<div class="banner">
+			<ul>
+				<li><a href="Final.html">Home</a></li>
+				<li><a href="Final2.html">About Me</a></li><!--Link to other page-->
+				<li><a href="https://milkywaymike.com/">Favorite Photographer</a></li>
+				<li><a href="https://www.instagram.com/jus10__w/">My Instagram</a></li>
+			</ul>
+		</div>
+		<h1 id="heading"></h1>
+		<script type="text/javascript">
+				var Name;
+				Name = prompt("Enter your name:")
+				document.getElementById("heading").innerHTML= Name + "! Welcome to my photography page!"
+		</script>
+		<script type="text/javascript">
+			function pic1(){
+				document.getElementById("firstpic").src="20.jpg";
+				document.getElementById("caption").innerHTML="20 second exposure";
+			}
+			function pic2(){
+				document.getElementById("firstpic").src="512.jpg";
+				document.getElementById("caption").innerHTML="512 second exposure";
+			}
+			function pic3(){
+				document.getElementById("firstpic").src="4252.jpg";
+				document.getElementById("caption").innerHTML="4252 second exposure";
+			}
+			function min(){
+				var sec;
+				var min;
+				sec=document.getElementById("seconds").value;
+				min=parseFloat(sec)/60;
+				document.getElementById("ans").innerHTML= sec+" seconds = " + min.toFixed(2) + " minutes";
+
+			}
+		</script>
+		<div class="exposure">
+			<h3>Exposure</h3>
+			<p class="pic">
+				<img id="firstpic" src="20.jpg" alt="20 sec" />
+			</p>
+			<p id="caption">20 second exposure</p>
+			<p class="buttonpic">
+				<button onclick="pic1()"><img src="20.jpg" alt="20 sec" /> </button>
+				<button onclick="pic2()"><img src="512.jpg" alt="512 sec" /></button>
+				<button onclick="pic3()"><img src="4252.jpg" alt="4252 sec"></button>
+			</p>
+			<br />
+			<p>
+				Press the buttons above to see how different lengths of exposure can affect taking pictures of the sky.
+				If you want to figure out how long the exposure was in minutes enter the number below and convert it.
+			</p>
+			<p>
+				<label for="seconds">Convert seconds to minutes</label>
+				<input id="seconds" type="text">
+				<button class="button2" onclick="min()">Convert</button>
+			</p>
+			<p id="ans"></p>
+		</div>
+		<script type="text/javascript">
+			function erik(){
+				document.getElementById("erikbefore").src="after.jpg"
+			}
+			function erik2(){
+				document.getElementById("erikbefore").src="before.jpg"
+			}
+		</script>
+		<div class="erik">
+			<h3>Editing</h3>
+			<p>
+				<img id="erikbefore" src="before.jpg" alt="ERIK WITH A K" />
+			</p>
+			<p>
+				Pess the buttons below to see the before and after editing the picture.
+			</p>
+			<p>
+				<button class="button1" onclick="erik2()">Before</button> <button class="button1" onclick="erik()">After</button>
+			</p>
+		</div>
+		<script type="text/javascript">
+			function mm(){
+				var m;
+				var a;
+				m=document.getElementById("lens").value;
+				a=parseFloat(m)*1.6;
+				document.getElementById("cropped").innerHTML= m + "mm = " + a.toFixed(2) + "mm cropped";
+			}
+		</script>
+		<div class="sensors">
+			<h3>Cropped sensors</h3>
+			<p>
+				In a camera there are different size sensors that recorded the image. There are many different sized sensors but when talking about a normal DSLR sensor there are three different sizes Medium format, Full frame, and APS-C also known as cropped. The largest sensor is medium format because it is the same size as medium format fill. The second sensor is full frame because its 35mm wide just like a traditional 35mm film camera. The smallest of those is APS-C (cropped sensor). It’s around because it’s cheaper to make a smaller sensor. Because the APS-C sensor is smaller it crops the images so when you use a same sized lens on a full frame camera and as a cropped sensor it will look bigger on the cropped sensor. For example a 50mm lens will become a 80mm lens on a cropped sensor.
+			</p>
+			<p class="center">
+				<label for="lens">Enter the focal length of a lens you would like to convert to a cropped sensor size</label>
+				<br />
+				<input id="lens" type="text">
+				<button class="button1" onclick="mm()">Go</button>
+			</p>
+			<p id="cropped" class="center"></p>
+		</div>
+		<h3>Some of my work</h3>
+		<div class="pictures">
+			<table>
+				<tr>
+					<td><img src="jayden.jpg" alt="jayden" /></td>
+					<td><img src="maddy.jpg" alt="maddy" /></td>
+				</tr>
+				<tr>
+					<td><img src="jordanscar.jpg" alt="jordanscar" /></td>
+					<td><img src="milkyway2.jpg" alt="milkyway" /></td>
+				</tr>
+				<tr>
+					<td><img src="dallin.jpg" alt="dallin" /></td>
+					<td><img src="hunter.jpg" alt="hunter" /></td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="bottom">
+			<hr />
+			<p class="bottom">
+				Author: Justin Wilford
+				<br /> 
+				Date last modified: 4/17/2019
+			</p>
+		</div>
+	</body>
+	</html>
